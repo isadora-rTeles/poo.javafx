@@ -1,2 +1,2 @@
 # poo.javafx
-trabalho do professro akira
+trabalho do professor akira
