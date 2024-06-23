@@ -1,0 +1,84 @@
+/**
+ * Sample Skeleton for 'poo.fxml' Controller Class
+ */
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.stage.Stage;
+import javafx.event.Event;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+
+
+public class pooControler{
+    pooView pooView;
+    Stage stage;
+
+    @FXML // ResourceBundle that was given to the FXMLLoader
+    private ResourceBundle resources;
+
+    @FXML // URL location of the FXML file that was given to the FXMLLoader
+    private URL location;
+
+    @FXML // fx:id="buttonEnd"
+    private Button buttonEnd; // Value injected by FXMLLoader
+
+    @FXML // fx:id="buttonStart"
+    private Button buttonStart; // Value injected by FXMLLoader
+
+    @FXML // fx:id="label"
+    private Label label; // Value injected by FXMLLoader
+
+    @FXML // fx:id="radioButtonAr"
+    private RadioButton radioButtonAr; // Value injected by FXMLLoader
+
+    @FXML // fx:id="radioButtonCurtina"
+    private RadioButton radioButtonCurtina; // Value injected by FXMLLoader
+
+    @FXML // fx:id="radioButtonLampadas"
+    private RadioButton radioButtonLampadas; // Value injected by FXMLLoader
+
+    @FXML // fx:id="radioButtonTV"
+    private RadioButton radioButtonTV; // Value injected by FXMLLoader
+
+    @FXML // fx:id="textAr"
+    private TextField textAr; // Value injected by FXMLLoader
+
+    @FXML // fx:id="textCurtinas"
+    private TextField textCurtinas; // Value injected by FXMLLoader
+
+    @FXML // fx:id="textLampadas"
+    private TextField textLampadas; // Value injected by FXMLLoader
+
+    @FXML // fx:id="textTV"
+    private TextField textTV; // Value injected by FXMLLoader
+    @FXML
+    private Label resultado;
+    
+   public pooControler(){
+        this.stage = new Stage();
+        this.pooView= new pooView();
+        this.pooView.setController(this);}
+   @FXML // This method is called by the FXMLLoader when initialization is complete
+    public void iniciar() throws Exception{
+        this.pooView.start(this.stage);
+        this.stage.show();}
+   public void botaoCalcularClicado(Event e){
+        try{
+            
+    }catch(NumberFormatException exception){
+         resultado.setText("dados invalidos");
+    }
+   }
+   public void botaoEndClicado(Event e) {
+       textLampadas.setText("");
+       textCurtinas.setText("");
+       textAr.setText("");
+       textTV.setText("");}    
+}
